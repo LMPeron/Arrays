@@ -14,10 +14,18 @@ public class Arrays {
     //   System.out.println(i + ": " + intArray[i]);
     // }
 
-    RegistroPontuacao rp = new RegistroPontuacao("Leonardo", 100);
+
+    RegistroPontuacao rpLeo = new RegistroPontuacao("Leonardo", 100);
+    RegistroPontuacao rpNeto = new RegistroPontuacao("Neto", 10);
+    RegistroPontuacao rpGabriel = new RegistroPontuacao("Gabriel", 80);
+    RegistroPontuacao rpMatheus = new RegistroPontuacao("Matheus", 20);
+
 
     PainelPontuacao painel = new PainelPontuacao(10);
-    painel.adicionar(rp);
+    painel.adicionar(rpMatheus);
+    painel.adicionar(rpNeto);
+    painel.adicionar(rpGabriel);
+    painel.adicionar(rpLeo);
 
     painel.imprimir();
 
