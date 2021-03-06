@@ -19,7 +19,7 @@ public class PainelPontuacao {
 
   public void imprimir() {
     for (int i=0; i<=quantidadeRegistros; i++) {
-      System.out.println(registros[i]);
+      System.out.println("Nome: " + registros[i].getNome() + "   " + "Pontuação: " + registros[i].getPontuacao());
     }
   }
 
