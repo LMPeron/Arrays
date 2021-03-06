@@ -24,6 +24,7 @@ public class Arrays {
     PainelPontuacao painel = new PainelPontuacao(10);
     painel.adicionar(rpMatheus);
     painel.adicionar(rpNeto);
+    painel.adicionar(rpNeto);
     painel.adicionar(rpGabriel);
     painel.adicionar(rpLeo);
 

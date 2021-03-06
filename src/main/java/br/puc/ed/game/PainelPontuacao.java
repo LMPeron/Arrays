@@ -13,23 +13,25 @@ public class PainelPontuacao {
   }
 
   public void adicionar(RegistroPontuacao rp) {
-    if (quantidadeRegistros>0) {
-      for (int i=0; i<quantidadeRegistros; i++) {
-        
-        if (rp.getPontuacao() > registros[i].getPontuacao()) {
-
-          for (int j=quantidadeRegistros; j > 0; j--) {
-            registros[j] = registros[j - 1];
+    if (quantidadeRegistros <= capacidade) {
+      if (quantidadeRegistros>0) {
+        this.quantidadeRegistros++;
+        for (int i=0; i<quantidadeRegistros - 1; i++) {
+          if (rp.getPontuacao() > registros[i].getPontuacao()) {
+            for (int j=quantidadeRegistros - 1; j > 0; j--) {
+              registros[j] = registros[j - 1];
+            }
+            registros[i] = rp;
+            break;
+          } else {
+            registros[quantidadeRegistros - 1] = rp;
           }
-          registros[i] = rp;
-          break;
         }
+      } else {
+        registros[0] = rp;
+        this.quantidadeRegistros++;
       }
-    } else {
-      registros[0] = rp;
     }
-
-    this.quantidadeRegistros++;
   }
 
   public void imprimir() {
