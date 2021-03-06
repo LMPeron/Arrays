@@ -1,4 +1,5 @@
 package br.puc.ed.game;
+import java.util.Random;
 
 public class PainelPontuacao {
   private RegistroPontuacao[] registros;
@@ -13,6 +14,7 @@ public class PainelPontuacao {
 
   public void adicionar(RegistroPontuacao rp) {
     registros[quantidadeRegistros] = rp;
+    this.quantidadeRegistros++;
   }
 
   public void imprimir() {
@@ -26,7 +28,12 @@ public class PainelPontuacao {
   }
 
   public void excluirAleatorio() {
-    
+    Random random = new Random();
+    int qtdRandom = quantidadeRegistros;
+
+    for(int i=0; i<=quantidadeRegistros; i++) {
+      registros[random.nextInt(qtdRandom)] = null;
+    }
   }
 
 }
