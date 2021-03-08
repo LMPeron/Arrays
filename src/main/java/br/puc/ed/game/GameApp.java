@@ -5,7 +5,7 @@ public class GameApp {
   public static void main(String[] args) {
     PainelPontuacao painelPontuacao = new PainelPontuacao(5);
     painelPontuacao.adicionar(new RegistroPontuacao("Lúcia", 57));
-    painelPontuacao.adicionar(new RegistroPontuacao("Ricardo", 79));
+    painelPontuacao.adicionar(new RegistroPontuacao("Ricardo", 79));  
     painelPontuacao.adicionar(new RegistroPontuacao("Maria", 42));
     painelPontuacao.adicionar(new RegistroPontuacao("Erick", 50));
     painelPontuacao.imprimir();

@@ -27,7 +27,11 @@ public class PainelPontuacao {
         return;
       }
     }
-    if (rp.getPontuacao() > registros[quantidadeRegistros - 1].getPontuacao()) registros[quantidadeRegistros - 1] = rp;
+    if (this.quantidadeRegistros < capacidade) {
+      registros[quantidadeRegistros - 1] = rp;
+    } else {
+      if (rp.getPontuacao() > registros[quantidadeRegistros - 1].getPontuacao()) registros[quantidadeRegistros - 1] = rp;
+    }
   }
 
   public void imprimir() {
