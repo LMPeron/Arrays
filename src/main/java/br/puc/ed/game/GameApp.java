@@ -10,6 +10,9 @@ public class GameApp {
     painelPontuacao.adicionar(new RegistroPontuacao("Erick", 50));
     painelPontuacao.imprimir();
     System.out.println("////////////////////////////////////");
+    painelPontuacao.excluirAleatorio();
+    painelPontuacao.imprimir();
+    System.out.println("////////////////////////////////////");
     painelPontuacao.adicionar(new RegistroPontuacao("Vinícius", 55));
     painelPontuacao.imprimir();
     System.out.println("////////////////////////////////////");

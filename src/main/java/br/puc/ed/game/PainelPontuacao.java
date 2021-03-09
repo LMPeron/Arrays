@@ -35,7 +35,7 @@ public class PainelPontuacao {
   }
 
   public void imprimir() {
-    for (int i=0; i<quantidadeRegistros; i++) {
+    for (int i=0; i<this.quantidadeRegistros; i++) {
       System.out.println("Nome: " + registros[i].getNome() + "   " + "Pontuação: " + registros[i].getPontuacao());
     }
   }
@@ -46,11 +46,12 @@ public class PainelPontuacao {
 
   public void excluirAleatorio() {
     Random random = new Random();
-    int qtdRandom = quantidadeRegistros;
-
-    for(int i=0; i<=quantidadeRegistros; i++) {
-      registros[random.nextInt(qtdRandom)] = null;
+    int randomDel = random.nextInt(this.quantidadeRegistros);
+    registros[randomDel] = null;
+    for(int i=randomDel; i<this.quantidadeRegistros; i++) {
+      registros[i] = registros[i + 1];
     }
+    this.quantidadeRegistros--;
   }
 
 }
