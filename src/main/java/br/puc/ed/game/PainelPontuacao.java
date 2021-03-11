@@ -44,6 +44,14 @@ public class PainelPontuacao {
     this.registros = new RegistroPontuacao[this.capacidade];
   }
 
+  public void excluirOne(int ind) {
+    this.registros[ind] = null;
+    for (int i=ind; i<this.quantidadeRegistros; i++) {
+      registros[i] = registros[i + 1];
+    }
+    this.quantidadeRegistros--;
+  }
+
   public void excluirAleatorio() {
     Random random = new Random();
     int randomDel = random.nextInt(this.quantidadeRegistros);
