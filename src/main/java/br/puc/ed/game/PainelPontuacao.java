@@ -1,4 +1,5 @@
 package br.puc.ed.game;
+
 import java.util.Random;
 
 public class PainelPontuacao {
@@ -45,12 +46,19 @@ public class PainelPontuacao {
   }
 
   public void excluirOne(int ind) {
-    this.registros[ind] = null;
-    for (int i=ind; i<this.quantidadeRegistros; i++) {
-      registros[i] = registros[i + 1];
+    try {
+      this.registros[ind] = null;
+      for (int i=ind; i<this.quantidadeRegistros; i++) {
+        registros[i] = registros[i + 1];
+      }
+      this.quantidadeRegistros--;
+    } catch (ArrayIndexOutOfBoundsException e) {
+      e.printStackTrace();
+      System.out.println("Favor inserir índice válido");
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-    this.quantidadeRegistros--;
-  }
+  } 
 
   public void excluirAleatorio() {
     Random random = new Random();
