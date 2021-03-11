@@ -35,6 +35,21 @@ public class PainelPontuacao {
     }
   }
 
+  public void adicionarDesorganizado(RegistroPontuacao rp) {
+    if (this.quantidadeRegistros < capacidade) {
+      quantidadeRegistros++;
+      registros[quantidadeRegistros - 1] = rp;
+    } else {
+      int menor = 0;
+      for(int i=1; i<this.quantidadeRegistros; i++) {
+        if (registros[i].getPontuacao() < registros[menor].getPontuacao()) {
+          menor = i;
+        }
+      }
+      this.registros[menor] = rp;
+    }
+  }
+
   public void imprimir() {
     for (int i=0; i<this.quantidadeRegistros; i++) {
       System.out.println("Nome: " + registros[i].getNome() + "   " + "Pontuação: " + registros[i].getPontuacao());

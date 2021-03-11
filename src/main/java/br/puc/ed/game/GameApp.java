@@ -9,7 +9,23 @@ public class GameApp {
     painelPontuacao.adicionar(new RegistroPontuacao("Maria", 42));
     painelPontuacao.adicionar(new RegistroPontuacao("Erick", 50));
     painelPontuacao.imprimir();
-    painelPontuacao.excluirOne(2);
+    System.out.println("///////// ORGANIZADO ///////////////");
+
+    PainelPontuacao painelPontuacaoDesorganizado = new PainelPontuacao(5);
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Lúcia", 57));
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Ricardo", 79));  
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Maria", 42));
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Erick", 50));
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Leo", 20));
+    painelPontuacaoDesorganizado.adicionarDesorganizado(new RegistroPontuacao("Substituto", 50));
+    painelPontuacaoDesorganizado.imprimir();
+    System.out.println("///////// DESORGANIZADO ///////////////");
+
+
+
+
+
+    painelPontuacao.imprimir();
     System.out.println("////////////////////////////////////");
     painelPontuacao.imprimir();
     painelPontuacao.excluirOne(6);
